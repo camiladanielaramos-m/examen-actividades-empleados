@@ -1,0 +1,4 @@
+1 | Elaborar Reporte Mensual | Realizar balance financiero de actividades de la empresa | Pendiente
+2 | Capacitación del Personal | Curso introductorio de herramientas digitales para empleados | En proceso
+3 | Mantenimiento de Equipos | Revisión de equipos de cómputo en oficinas | Completada
+5 | Reunion | planificacion de objetos semanales | Completada

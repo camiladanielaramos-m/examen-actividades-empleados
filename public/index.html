@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Actividades de Empleados</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <h1>Gestor de Actividades de Empleados</h1>
+
+    <div id="alerta" class="mensaje" style="display: none;"></div>
+
+    <hr>
+
+    <!-- Formulario para Registrar / Editar -->
+    <h3 id="tituloFormulario">Registrar Actividad</h3>
+    <form id="formularioActividad">
+        <input type="hidden" id="actividadId" value="">
+
+        <div class="campo">
+            <label for="nombre">Nombre de la actividad:</label>
+            <input type="text" id="nombre" required placeholder="Ej. Reporte semanal">
+        </div>
+
+        <div class="campo">
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" rows="3" required placeholder="Descripción de la tarea del empleado..."></textarea>
+        </div>
+
+        <div class="campo">
+            <label for="estado">Estado del proceso:</label>
+            <select id="estado">
+                <option value="Pendiente">Pendiente</option>
+                <option value="En proceso">En proceso</option>
+                <option value="Completada">Completada</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <button type="submit" id="btnGuardar">Registrar</button>
+            <button type="button" id="btnCancelar" style="display: none;">Cancelar</button>
+        </div>
+    </form>
+
+    <hr>
+
+    <!-- Lista y Búsqueda -->
+    <h3>Actividades Registradas (Lista Enlazada)</h3>
+
+    <div class="filtros">
+        <label>Buscar: <input type="text" id="buscador" placeholder="Escribe para buscar..."></label>
+        &nbsp;&nbsp;
+        <label>Filtrar por estado: 
+            <select id="filtroEstado">
+                <option value="Todos">Todos</option>
+                <option value="Pendiente">Pendiente</option>
+                <option value="En proceso">En proceso</option>
+                <option value="Completada">Completada</option>
+            </select>
+        </label>
+    </div>
+
+    <table border="1" cellpadding="6" cellspacing="0" style="margin-top: 10px;">
+        <thead>
+            <tr>
+                <th style="width: 40px;">ID</th>
+                <th>Actividad</th>
+                <th>Descripción</th>
+                <th style="width: 140px;">Estado</th>
+                <th style="width: 130px;">Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+            <tr>
+                <td colspan="5" style="text-align: center;">Cargando actividades...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <script src="app.js"></script>
+</body>
+</html>
